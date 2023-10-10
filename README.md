@@ -4,7 +4,7 @@ Author : Moksh Mehan
 <br>
 Other Contibuters : Khushi Wadhwa 
 <br>
-Linked :
+LinkedIn Profile :
 <br>
 Owner : (https://www.linkedin.com/in/moksh-mehan-7280381b3/)
 Other Member : (https://www.linkedin.com/in/khushi-wadhwa-50a8a6214/)
