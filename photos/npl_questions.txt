@@ -1,0 +1,432 @@
+NPL Round 3 Test
+Back to Question List
+Time Remaining: 03:15:00
+
+    Question 5 / 5
+
+    The enthusiasm for one of the India’s grandest Technical Festival, Technozion ’12, has drastically increased. Every year a few thousand visitors are visiting NIT Warangal for Technozion. The road network centering Warangal’s capital city is not up to the mark. Therefore in order to solve this problem, the government is planning to enhance the road network of Warangal district.
+
+    Warangal District is composed of N towns. There are several pairs of towns that are connected by multiple different paths and there are few pairs of towns which are not connected by any path (Highway). This unorganized road network causes complicated traffic pattern to the large number of outstation participants, who visits NIT Warangal to participate in Technozion.
+
+                So, in order to rectify this problem, the government wants to construct some new highways and destruct some of the already existing ones, so that after reconstruction, there exists exactly one path between every pairs of distinct towns.
+
+    Constructing new Highway and destruction old ones requires a lot of budget; the government hires you to minimize the total budget of reconstruction.
+
+    Input:
+
+    The First line of input contains a single integer N, the number of towns in Warangal District.
+
+    Then follows, the N*N adjacency matrix A ,which contains either 0(A[i][j]=0 , if towns i and j not connected directly by Highway/edge) or 1 (A[i][j]=1 if towns i and j  are connected directly by Highway/edge) value.
+
+    The next line contains a single blank line. 
+
+    Then follows, the N*N matrix C. C[i][j] is the cost of building highway between towns i and j. If there is already a highway/edge between towns i and j, then the value of C[i][j] is  -1 . The -1 value in matrix C indicates ,you have to ignore the building cost for the highway that already exists.
+
+    The next line contains a single blank line. 
+
+    Then, followed, the N*N matrix D. If there already is a highway between towns i and j , then the cost of destroying  it is D[i][j] ,else the value of  D[i][j] is -1 .
+
+    The -1 value in matrix D indicates ,you  have to ignore the cost for destroying  the highway that already exists.
+
+     
+
+    Output:
+
+    Output consists of exactly one line with a single integer – the minimum budget required for reconstruction.
+
+    Constraints :
+
+    1<=N<=50
+
+    0<=C[i][j]<=25   (Also contains -1 as described above)
+
+    26<=D[i][j]<=51 (Also contains -1 as described above)
+
+    Note:
+
+    It is guaranteed that, there exists no highway that connects to itself.
+
+    Sample Input 1:
+
+    3
+
+    0 0 0
+
+    0 0 0
+
+    0 0 0
+
+     
+
+    0 1 3
+
+    1 0 2
+
+    3 2 0
+
+     
+
+    -1 -1 -1
+
+    -1 -1 -1
+
+    -1 -1 -1
+
+    Sample Output 1:
+
+    3
+
+    Sample Input 2:
+
+    6
+
+    0 1 1 0 0 0
+
+    1 0 1 0 0 0
+
+    1 1 0 0 0 0
+
+    0 0 0 0 1 1
+
+    0 0 0 1 0 1
+
+    0 0 0 1 1 0
+
+     
+
+    0 -1 -1 5 5 5
+
+    -1 0 -1 5 5 5
+
+    -1 -1 0 5 5 5
+
+    5 5 5 0 -1 -1
+
+    5 5 5 -1 0 -1
+
+    5 5 5 -1 -1 0
+
+     
+
+    -1 1 3 -1 -1 -1
+
+    1 -1 2 -1 -1 -1
+
+    3 2 -1 -1 -1 -1
+
+    -1 -1 -1 -1 1 3
+
+    -1 -1 -1 1 -1 2
+
+    -1 -1 -1 3 2 -1
+
+    Sample Output 2:
+
+    7
+
+    Explanation:
+
+    For sample Input 1 ,
+
+    there are three towns(0,1 and 2) in Warangal District.The three towns are completely disconnected.
+
+    So, build the highway 0-1(building cost 1) and build the highway 1-2(building cost 2).The total budget required is 3 ,which is minimum.
+
+
+
+NPL Round 3 Test
+Back to Question List
+Time Remaining: 03:14:47
+
+    Question 4 / 5
+
+                                                                                 Events Queries
+
+    Last year, at Technozion XI, several exhibits and shows capture the audience attention with its beautiful sights and nudged them to the edge of their seats. This Technozion, the big daddy of big bad motorcycles hits the quaint town of Warangal!
+
+    The one and the only Harley Davidson Motorcycle Company are about to exhibit. There are N students (numbered from 1 to N), standing in a queue for the exhibition outside the stadium gate.
+
+    Tom loves data visualization and statistics. So, he starts collecting data in an indexed table from each student, starting from the first student in the queue, regarding the event they liked most in Technozion ’12.
+
+    Now, Tom is interesting in finding out the number of distinct events between any two indexes [i,j] of the table. As number of students in a queue is very large and Tom has large number of queries, only a good computer programmer, like you ,can help Tom.
+
+    Input:
+
+    First line of input contains a single Integer N, indicating the total number of students standing in a queue.
+
+    The next line contains N space separated integer A[1],A[2],A[3],…A[N].  A[1] contains  event id of the event  participant -1 liked most, A[2]  contains  event id of the event participant- 2 liked most and so on.
+
+    The next line contains a single integer K, indicating the number of queries.
+
+    Then follow K lines each containing two space separated integers i , j .
+
+    Output:
+
+    For each K Query, return the number of distinct event id between indexes i and j, inclusive.
+
+    Constraints:
+
+    1<=N<=25000
+
+    1<= A[i] <=106
+
+    1<=K<=100000
+
+    1<= (i , j)<=N
+
+    Sample Input:
+
+    8
+
+    1 2 1 5 2 4 5 4
+
+    10
+
+    1 8
+
+    1 2
+
+    2 4
+
+    3 5
+
+    3 8
+
+    4 7
+
+    6 8
+
+    1 5
+
+    2 6
+
+    6 8
+
+    Sample Output:
+
+    4
+
+    2
+
+    3
+
+    3
+
+    4
+
+    3
+
+    2
+
+    3
+
+    4
+
+    2
+
+
+
+Question 3 / 5
+
+ 
+
+ 
+
+                                                                                       The Billboards Arrangement
+
+The preparation for Technozion ’12 is in full swing. A three day annual technical symposium flags off in next few hours. However, Billboards from the entrance to administration office building are still not placed.
+
+This year the Technozion sponsorship team has come up with two varieties of Billboards. They are:
+
+Type  A Billboard  -  The Technozion official Sponsors Billboard’s.
+
+Type  B Billboard  - Gandhian Engineering, Technozion ’12 theme Billboard’s.
+
+There is a long road from the entrance to the Administration building, where there are N locations to place the billboards. (You may assume the road to be a straight line).
+
+The Technozion team wishes to place billboards at these N locations in such a way that no two Billboards of  type B are grouped together.
+
+There are large numbers of possible arrangements, which meet Team Technozion’ s Criteria of having no Type B Billboards adjacent to each other and your task out here is to help them out with this problem.
+
+Notes:
+
+-There are infinite numbers of Billboards of type A and type B.
+
+-Placing two Billboards of type A adjacent to each other is a valid arrangement.
+
+Input:
+
+The input contains exactly one positive integer N indicating the number of locations to place billboards.
+
+Output:
+
+Print on a line the number of possible arrangements modulo 1000000007 (109+7), that meets   the Technozion Team’s Criteria as described above.
+
+Constraints:
+
+0<=N<=1018
+
+Sample  Input 1:
+
+3
+
+Sample output 1:
+
+5
+
+Sample Input 2:
+
+8
+
+Sample Output 2:
+
+55
+
+Sample Input 3:
+
+100
+
+Sample Output 3:
+
+470199269
+
+Explanation:
+
+For Sample Input 1, the valid arrangements are:
+
+AAA, BAA, BAB, AAB, ABA.
+
+
+    Question 2 / 5
+
+     
+
+                                                                                            Alice and Bob as NPL Problem Setter
+
+    As you see, problem setting task in Technozion’s most famous event, National Programming League is never an easy task. Razor-sharp analytical skill, creativity and above all, scheduling is most important task.
+
+    Alice and Bob, the two masterminds are   bored of winning so many programming contests. Now, they want to get some experience on the other side of the equation.
+
+    Alice and Bob agreed to produce well-balanced problem set of N unsolicited problems for NPL. 
+
+    For each of the problems, Alice has decided to first create the problem statement and Bob is going to Validate/test the problem Alice created.
+
+    As the difficulty level of each problem is different, so for each problem i, Alice require S[i] time for problem setting and her friend Bob  requires T[i] time for Testing it .
+
+    The problem setting and problem testing activities are independent of each other, but obviously Bob can test the problem, only after Alice finishes setting it. Bob can start testing a problem immediately after Alice finishes that problem, or he may wish to start that problem later.
+
+    You are given the time that Alice and Bob require to complete their respective task for each problem of the problem set. Your main task out here is to return the minimum possible time required to complete the entire problem set.
+
+    Note: none of them works on more than one problem at a time.
+
+    Input :
+
+    The first line of input contains a single integer C, indicating the number of test cases that follow.
+
+    First line of each test case contains a single integer N, the number of problems in the problem set.
+
+    The next line contains N space separated integers S[i] , where S[i] indicates  the time required for Alice to set the problem i.
+
+    The next line has N more space separated integers T[i], where T[i] indicates the time required for Bob to test the problem i.
+
+    Output :
+
+    Print exactly one line containing only one integer - the minimum time required to complete the problem set.
+
+    Constraints:
+
+    1<=C<=10
+
+    1<=N<=20
+
+    1<=S[i]<=100
+
+    1<=G[i]<=100
+
+    Sample Input :
+
+    2
+
+    3
+
+    4 5 6
+
+    1 1 6
+
+    6
+
+    15 22 3 12 9 12
+
+    4 10 6 8 6 9
+
+    Sample Output:
+
+    16
+
+    77
+
+    Explanation:
+
+    For First test case, the problem set can be completed in minimum time, scheduling in order
+
+    3-2-1.
+
+    For Second test case, the problem set can be completed in minimum time, scheduling in order
+
+    3-2-6-4-5-1.
+
+
+
+Question 1 / 5
+
+ 
+
+                                                                            Encoded Confirmation code
+
+Farkhi  is a member of Hospitality Team of Technozion 2012. Her main job is to check conformation code, confirmation email, college ID card, room allotments and mess registration of the outstation participants who come NIT Warangal to take part in Technozion.
+
+Most of the outstation participants have forgotten the conformation code sent to them, which they received as a part of their registration procedure. The confirmation code sent to the participants is stored in Technozion server-database in form of encoded substituted-code text string S. Farkhi needs to decode it, in order to complete the participant registration formalities.
+
+A substituted -code is an encrypted text where one letter is replaced by another throughout the cipher text.
+
+As the conformation code S stored in database is large encoded substituted -code text string, your task out here is to write a program that will help Farkhi in decrypting/decoding the string S.
+
+Input Format:
+
+The first line of input contains a single integer N , indicating the number of test cases that follow. Each test case consists of two lines of input. The first line is the encoded substituted -code text string S .The second line contains key K, a character string of length 26 which represents the mapping for each character. K [0] gives mapping of letter ‘a’, K [1] gives mapping of ‘b’,…………, K [25] gives mapping of ‘z’.
+
+String S and K contains no whitespace or characters other than [a-z].
+
+Output Format:
+
+Output T lines, one for each test case, the decrypted/decoded string obtained by decoding the encoded substituted-code text string.
+
+Sample Input:
+
+2
+
+fhsolmvtlgdt
+
+mwemtnopopasafihjklexwvbnm
+
+abrgczijyp
+
+tenzefhhziklmnonqcstuvwxoo
+
+Sample Output:
+
+nplisawesome
+
+technozion
+
+ 
+
+Constraints:
+
+1<=T<=10
+
+ 1<=|S|<=1000
+
+ 
+
+ 
