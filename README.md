@@ -1,8 +1,12 @@
 # Bus Registration System
 <br>
 Author : Moksh Mehan
+<br>
 Other Contibuters : Khushi Wadhwa 
-Linked : Owner (https://www.linkedin.com/in/moksh-mehan-7280381b3/)
+<br>
+Linked :
+<br>
+Owner : (https://www.linkedin.com/in/moksh-mehan-7280381b3/)
 Other Member : (https://www.linkedin.com/in/khushi-wadhwa-50a8a6214/)
 
 Here with the help of Full Stack Web Development, I have created a bus registration system.
